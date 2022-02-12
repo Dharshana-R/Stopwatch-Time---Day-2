@@ -1,0 +1,130 @@
+* {
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    user-select: none;
+}
+
+body {
+    font-size: 100%;
+    font-family: "Share Tech Mono", monospace;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: #FFF !important;
+}
+
+/* button */
+
+button {
+    background-color: #FF5C8D;
+    color: #FFF;
+    padding: 12px 42px;
+    position: relative;
+}
+
+button::before {
+    width: 95%;
+    height: 85%;
+    content: '';
+    position: absolute;
+    top: 15%;
+    left: -4.5%;
+    border: 3px solid #FF5C8D;
+    background-color: transparent;
+    transition: all 0.5s;
+    z-index: -1;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+button:hover::before {
+    top: 20%;
+    left: -6.5%;
+}
+
+.stopwatch {
+    text-align: center;
+    border: 0.7rem solid #FFC0D3;
+    padding: 2rem; 
+    margin-top: 4rem;
+    box-shadow: 0 0 10px #FF5C8D;
+    position: relative;
+    color: white !important;
+}
+
+.start .pause .lap .reset {
+    color: white;
+}
+
+
+.time {
+    font-size: 3em;
+    color: #219F94;
+    text-shadow: 0 0 3px #198b82;
+    margin-bottom: 0.5em;
+}
+
+.laps {
+    color: rgb(255, 0, 0);
+    text-shadow: 0 0 5px rgb(255, 110, 110);
+    margin: 2rem 0 2rem 0;
+    padding: 0;
+}
+
+.laps li {
+    list-style-type: decimal;
+    font-size: 1.2em;
+}
+
+@media only screen and (max-width: 600px) {
+
+    button {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 50%;
+        margin-left: 6rem;
+    }
+    
+    .start{
+        margin-top: 1rem;
+    }
+
+    .pause {
+        margin-top: 1rem;
+    }
+
+    .lap{
+        margin-top: 1rem;
+    }
+
+    .reset{
+        margin-top: 1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .time{
+        margin-top: 2rem;
+    }
+
+    .stopwatch{
+        padding: 0.5rem;
+    }
+
+    .clear{
+        margin-left: 5rem;
+    }
+
+    .laps{
+        margin-left: 5rem;
+    }
+
+}
